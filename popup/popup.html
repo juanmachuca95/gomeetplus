@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="./styles/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./styles/js/bootstrap.bundle.min.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body style="min-width: 500px;">
+  <div class="container-fluid p-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <h3>GomeetPlus v1.0.0</h3>
+      <a class="navbar-brand bg-light p-2 rounded-circle" href="popup.html"">
+          <img src=" /images/icons/icon128.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      </a>
+    </div>
+
+    <p id="message"></p>
+    <!-- Asistencia -->
+    <h6 class="fw-bold">Conoce los ausentes en la llamada</h6>
+    <p class="heading">
+      <b>1. Cargar archivo:</b>
+      Carga la lista en formato Excel de las personas que asisten a tu reunión.
+      <b> Nota: </b>
+      los nombres de la lista deben coincidir con los nombres de los usuarios
+    </p>
+    <p class="heading">
+      <b>2. Ver ausentes</b>
+      Si la lista ingresada contiene el formato correcto, presiona en 👉 "Ausentes 🛌"
+    </p>
+    <button class="btn btn-light" id="upload">Cargar Participantes 🧑‍🎓</button>
+    <button class="btn btn-warning" id="ausentes">Ausentes 🛌</button>
+    
+    <!-- Notify chat -->
+    <h6 class="fw-bold mt-4">Notificación de chat</h6>
+      <p class="heading">
+        <b>1. Activa las notificación</b>
+        Presiona en "Active Chat 💬". Esto escucha los cambios en el dom y te notificara. 
+      </p>
+      <button class="btn btn-info" id="activeNotify">Active Chat 💬</button>
+      <button class="btn btn-danger" id="desactiveNotify">Desactivar Chat 💬</button>
+    </div>
+  </div>
+
+
+  <script src="./popup.js"></script>
+  <script src="./read-excel-file.min.js"></script>
+</body>
+
+</html>
