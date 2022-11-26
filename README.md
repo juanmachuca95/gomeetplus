@@ -13,10 +13,8 @@ git clone https://github.com/juanmachuca95/gomeetplus
 Loading an unpacked extension
 https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
-Example popup on chrome:
+Example popup on chrome: <br>
 ![popup](/images/popup.png)
-
-
 ## Contributing
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -32,7 +30,5 @@ Any contributions you make are **greatly appreciated**.
 ## License
 
 Distributed under the GNU GPLv3 License. See [LICENSE](./LICENSE) for more information.
-
-<hr>
 
 #### developed by <b>juanmachuca95</b> 🇦🇷
