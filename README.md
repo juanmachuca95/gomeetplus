@@ -1,7 +1,7 @@
 # ![icon](images/icons/icon32.png) GomeetPlus v1.0.0 
 
 ## Description
-Extension for google chrome that implements the notifications and attendance review of participants, through a list, admitting excel file upload.
+GomeetPlus allows you to see the chat messages while you share the screen or perform another task by activating chat notifications, it also allows you to know the participants who could not attend your meeting, implementing your list of participants in excel format. This extension is ideal if you teach
 
 ## Usage
 You can download the repository and use developer mode for chrome extensions and load it directly for your personal use.
@@ -15,6 +15,8 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#
 
 Example popup on chrome: <br>
 ![popup](/images/popup.png)
+
+`Note: the popup and report files html is only for spanish language for the moment`
 ## Contributing
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
