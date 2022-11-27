@@ -1,7 +1,7 @@
 # ![icon](images/icons/icon32.png) GomeetPlus v1.0.0 
 
 ## Description
-GomeetPlus allows you to see the chat messages while you share the screen or perform another task by activating chat notifications, it also allows you to know the participants who could not attend your meeting, implementing your list of participants in excel format. This extension is ideal if you teach
+GomeetPlus allows you to see the chat messages while you share the screen or perform another task by activating chat notifications, it also allows you to know the participants who could not attend your meeting, implementing your list of participants in excel format. This extension is ideal if you teach using google meet
 
 ## Usage
 You can download the repository and use developer mode for chrome extensions and load it directly for your personal use.
