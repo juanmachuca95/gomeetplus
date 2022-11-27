@@ -5,11 +5,16 @@ chrome.runtime.onMessage.addListener(
         console.log(sender)
         if (request.notify === "chat") {
             request.chat.forEach(element => {
+                let mensaje = ""
+                element.messages.forEach((msg) => {
+                    mensaje += msg +"\n"
+                })
+
                 chrome.notifications.create({
                     type: 'basic',
                     iconUrl: notificationIcon,
                     title: element.sender_name,
-                    message: element.messages[0],
+                    message: mensaje,
                     priority: 0
                 });
             });
@@ -30,7 +35,6 @@ chrome.runtime.onMessage.addListener(
                     }
                 })
             })
-            sendResponse({ status: "ok" })
         }
 
         if (request.desactiveChat) {
@@ -40,9 +44,13 @@ chrome.runtime.onMessage.addListener(
                 chrome.scripting.executeScript({
                     target: { tabId: tab.id },
                     files: ['./scripts/stopTimer.js'],
-                }, () => chrome.runtime.lastError)
+                }, () => {
+                    if (chrome.runtime.lastError === undefined){
+                        chrome.action.setBadgeText({ text: "" })
+                        sendResponse({ status: "ok" })
+                    }
+                })
             })
-            sendResponse({ status: "ok" })
         }
 
 

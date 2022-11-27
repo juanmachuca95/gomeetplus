@@ -1,3 +1,10 @@
+try {
+    document.querySelectorAll("[aria-pressed]")[3].click()
+} catch (e) {
+    alert("No estas en una reunion de google meet")
+}
+
+
 var totalMensajesActuales = [];
 var myInterval = setInterval(function(){
     let nuevosMensajesActuales = getMessages()
