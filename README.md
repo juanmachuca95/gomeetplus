@@ -17,7 +17,8 @@ Extension popup: <br>
 ![popup](/images/popup.png)
 
 ## Example excel
-The uploaded excel file must contain the names of the users in the first column and cell. for the treatment of the file the great library [read-excel-file](https://www.npmjs.com/package/read-excel-file) is used 
+The uploaded excel file must contain the names of the users in the first column and cell. for the treatment of the file the great library [read-excel-file](https://www.npmjs.com/package/read-excel-file) is used <br>
+
 ![excel](/images/example_excel.png)
 
 `Note: the popup and report files html is only for spanish language for the moment`
