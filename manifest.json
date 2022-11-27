@@ -3,6 +3,7 @@
     "name": "GomeetPlus",
     "description": "GomeetPlus allows you to see the chat messages while you share the screen or perform another task by activating chat notifications, it also allows you to know the participants who could not attend your meeting, implementing your list of participants in excel format. This extension is ideal if you teach",
     "version": "1.0.0",
+    "author": "Juan Gabriel Machuca",
     "action": {
         "default_popup": "popup/popup.html",
         "default_icon": {
