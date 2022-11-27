@@ -19,6 +19,7 @@ chrome.runtime.onMessage.addListener(
                 });
             });
             sendResponse({ status: "ok" });
+            return true;
         }
 
         if (request.activeChat) {
@@ -34,6 +35,7 @@ chrome.runtime.onMessage.addListener(
                         sendResponse({ status: "ok" })
                     }
                 })
+                return true;
             })
         }
 
@@ -43,7 +45,7 @@ chrome.runtime.onMessage.addListener(
                 let tab = tabs[0]
                 chrome.scripting.executeScript({
                     target: { tabId: tab.id },
-                    files: ['./scripts/stopTimer.js'],
+                    files: ['./scripts/stopTimer.js']
                 }, () => {
                     if (chrome.runtime.lastError === undefined){
                         chrome.action.setBadgeText({ text: "" })
@@ -51,15 +53,28 @@ chrome.runtime.onMessage.addListener(
                     }
                 })
             })
+            return true;
         }
 
-
-        if (request.setParticipants) {
-            chrome.action.setBadgeBackgroundColor({ color: "#66ff66" })
-            chrome.action.setBadgeText({ text: "UP" })
+        if (request.getParticipantes){
+            chrome.tabs.query({ active: true }, function (tabs) {
+                let tab = tabs[0]
+                chrome.scripting.executeScript({
+                    target: { tabId: tab.id },
+                    files: ['./scripts/inputFile.js', './scripts/read-excel-file.min.js'],
+                }, () => {
+                    if (chrome.runtime.lastError === undefined){
+                        chrome.action.setBadgeText({ text: "UP" })
+                    }
+                })
+            })
             sendResponse({ status: "ok" })
+            return true;
         }
+
+        return true;
     }
+
 );
 
 

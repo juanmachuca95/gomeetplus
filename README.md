@@ -16,6 +16,10 @@ https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#
 Extension popup: <br>
 ![popup](/images/popup.png)
 
+## Example excel
+The uploaded excel file must contain the names of the users in the first column and cell. for the treatment of the file the great library [read-excel-file](https://www.npmjs.com/package/read-excel-file) is used 
+![excel](/images/example_excel.png)
+
 `Note: the popup and report files html is only for spanish language for the moment`
 ## Contributing
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".

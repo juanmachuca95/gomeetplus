@@ -1,5 +1,10 @@
 stopTimer()
 
 function stopTimer() {
-    clearInterval(myInterval)
+    try {
+        init = false
+        clearTimeout(myInterval)
+    } catch (error) {
+        alert("Las notificación ya estabas desactivadas")
+    }
 }

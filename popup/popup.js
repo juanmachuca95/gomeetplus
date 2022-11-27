@@ -5,37 +5,18 @@ activeNotify = document.getElementById('activeNotify')
 desactiveNotify = document.getElementById('desactiveNotify')
 
 // Add events
-upload.addEventListener('click', inputFile)
+//upload.addEventListener('click', inputFile)
 ausentes.addEventListener('click', getAusentes)
 activeNotify.addEventListener('click', setActiveNotify)
 desactiveNotify.addEventListener('click', setDesactiveNotify)
 
-// functions
-function inputFile() {
-    let input = document.createElement('input')
-    input.type = 'file'
-    input.addEventListener('change', uploadFile)
-    input.click()
+// Nuevo 
+upload.addEventListener('click', getParticipantes)
+
+function getParticipantes(){
+    chrome.runtime.sendMessage({ getParticipantes: true }, () => {})
 }
 
-function uploadFile(e) {
-    // Using read-excel-file to read file excel
-    readXlsxFile(e.target.files[0]).then((rows) => {
-        let participants = []
-        rows.forEach(element => {
-            participants.push(element[0])
-        });
-
-        if (participants.length > 0) {
-            // Set lista de alumnos o participantes que deberian asistir
-            chrome.storage.local.set({ participants }, () => { })
-            chrome.runtime.sendMessage({ setParticipants: true }, (response) => {
-                if (response.status === "ok"){console.log("participantes cargados . . .")}
-            });
-            return
-        }
-    })
-}
 
 function getAusentes() {
     chrome.storage.local.get(['participants'], function (participantes) {
@@ -73,17 +54,9 @@ function participants(participants) {
 
 
 function setActiveNotify() {
-    chrome.runtime.sendMessage({ activeChat: true }, (response) => {
-        if (response.status === "ok"){ console.log(response.status) }
-    });
-    window.close()
+    chrome.runtime.sendMessage({ activeChat: true }, () => {});
 }
 
 function setDesactiveNotify() {
-    chrome.runtime.sendMessage({ desactiveChat: true }, (response) => {
-        if (response.status === "ok"){
-            chrome.action.setBadgeText({ text: '' });
-        }
-    });
-    window.close()
+    chrome.runtime.sendMessage({ desactiveChat: true }, () => {});
 } 
