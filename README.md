@@ -13,7 +13,7 @@ git clone https://github.com/juanmachuca95/gomeetplus
 Loading an unpacked extension
 https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
-Example popup on chrome: <br>
+Extension popup: <br>
 ![popup](/images/popup.png)
 
 `Note: the popup and report files html is only for spanish language for the moment`
