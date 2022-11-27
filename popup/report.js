@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let date = new Date();        
         let fecha = date.toLocaleDateString('es-AR');
         let hora = date.toLocaleTimeString('es-AR')
-        report.textContent = "Ausentes día " + fecha + " - " + hora
+        report.textContent = "🗓️ Ausentes día " + fecha + " - " + hora
         
         console.log(ausentes)
         
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             aus.forEach(element => {
                 var li = document.createElement('li')
                 li.textContent = element
+                li.classList.add("list-group-item")
                 lista.appendChild(li)
             });
             return 

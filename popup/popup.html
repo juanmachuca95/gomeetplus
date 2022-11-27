@@ -14,44 +14,37 @@
 </head>
 
 <body style="min-width: 500px;">
-  <div class="container-fluid p-4">
+  <div class="container-fluid pt-4 px-4">
     <div class="d-flex justify-content-between align-items-center">
-      <h3>GomeetPlus v1.0.0</h3>
+      <h3>GomeetPlus</h3>
       <a class="navbar-brand bg-light p-2 rounded-circle" href="popup.html"">
           <img src=" /images/icons/icon128.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
       </a>
     </div>
+    <!-- Notify chat -->
+    <h6 class="fw-bold">Notificación de chat</h6>
+    <p class="small">
+      Cuando se activa la notificaciones de chat se obtiene <b class="bg-success text-white p-1 small rounded">CHAT</b>
+    </p>
+    <button class="btn btn-success" id="activeNotify">Activar 💬</button>
+    <button class="btn btn-danger" id="desactiveNotify">Desactivar</button>
 
     <!-- Asistencia -->
-    <h6 class="fw-bold">Conoce los ausentes en la llamada</h6>
-    <p class="heading">
-      <b>1. Cargar archivo:</b>
+    <h6 class="fw-bold mt-4">Participantes en la llamada</h6>
+    <p class="small">
       Carga la lista en formato Excel de las personas que asisten a tu reunión.
-      <b> Nota: </b>
-      los nombres de la lista deben coincidir con los nombres de los usuarios
-    </p>
-    <p class="heading">
-      <b>2. Ver ausentes</b>
-      Si la lista ingresada contiene el formato correcto, presiona en 👉 "Ausentes 🛌"
+      Si el archivo es correcto obtienes <b class="bg-success text-white p-1 small rounded">UP</b> luego presiona en 👉 "Ausentes 🛌"
     </p>
     <button class="btn btn-light" id="upload">Cargar Participantes 🧑‍🎓</button>
     <button class="btn btn-warning" id="ausentes">Ausentes 🛌</button>
-
-    <!-- Notify chat -->
-    <h6 class="fw-bold mt-4">Notificación de chat</h6>
-    <p class="heading">
-      <b>1. Activa las notificación</b>
-      Presiona en "Active Chat 💬". Esto escucha los cambios en el dom y te notificara.
+    <p class="small mt-4">
+      <b>Nota: </b> utilizar la extension solo en pestañas de google meet.   
     </p>
-    <button class="btn btn-info" id="activeNotify">Active Chat 💬</button>
-    <button class="btn btn-danger" id="desactiveNotify">Desactivar Chat 💬</button>
   </div>
-  
+
   <!-- footer -->
-  <div class="container-fluid m-0 p-0">
-    <div class="d-flex flex-column flex-sm-row justify-content-between p-3 border-top bg-light">
-      <p class="small text-muted">© 2022 GomeetPlus. Made by juanmachuca95.</p>
-    </div>
+  <div class="container-fluid m-0 py-2 bg-light text-center">
+      <p class="small fst-italic text-muted">© 2022 GomeetPlus v1.0.0 - Made by juanmachuca95.</p>
   </div>
 
   <script src="./popup.js"></script>

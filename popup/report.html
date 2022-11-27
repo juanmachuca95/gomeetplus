@@ -14,28 +14,28 @@
 </head>
 
 <body style="min-width: 500px;">
-    
-    <div class="container-fluid p-4">
+
+    <div class="container-fluid px-4 pt-4">
         <div class="d-flex justify-content-between align-items-center">
-            <h3>GomeetPlus v1.0.0</h3>
+            <h3>GomeetPlus</h3>
             <a class="navbar-brand bg-light p-2 rounded-circle" href="popup.html"">
-                <img src=" /images/icons/icon128.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src=" /images/icons/icon128.png" alt="" width="30" height="24"
+                class="d-inline-block align-text-top">
             </a>
         </div>
         <a href="popup.html" class="bg-warning badge text-decoration-none text-dark">inicio</a>
-
-        <div class="py-2">
-            <p class="fw-bold" id="fecha"></p>
-            <ul id="listaAusentes"></ul>
-        </div>
     </div>
-    
+
+    <!-- Lista de ausentes -->
+    <div class="px-4 py-3 small bg-light rounded mt-2">
+        <p class="fw-bold" id="fecha"></p>
+        <ul class="list-group" id="listaAusentes"></ul>
+    </div>
+
     <!-- footer -->
-    <div class="container-fluid m-0 p-0">
-        <div class="d-flex flex-column flex-sm-row justify-content-between p-3 border-top bg-light">
-          <p class="small text-muted">© 2022 GomeetPlus. Made by juanmachuca95.</p>
-        </div>
-      </div>
+    <div class="container-fluid m-0 py-2 bg-light text-center">
+        <p class="small fst-italic text-muted">© 2022 GomeetPlus v1.0.0 - Made by juanmachuca95.</p>
+    </div>
     <script src="./report.js"></script>
 </body>
 
