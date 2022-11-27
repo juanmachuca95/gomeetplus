@@ -1,5 +1,4 @@
 // elements from dom
-message = document.getElementById('message')
 upload = document.getElementById('upload')
 ausentes = document.getElementById('ausentes')
 activeNotify = document.getElementById('activeNotify')
