@@ -85,5 +85,5 @@ function setDesactiveNotify() {
             chrome.action.setBadgeText({ text: '' });
         }
     });
-    //window.close()
+    window.close()
 } 
