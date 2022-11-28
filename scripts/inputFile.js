@@ -26,5 +26,5 @@ try {
     })
     inputFile.click()
 } catch (error) {
-    alert(error)   
+    alert("Necesitas ingresar a una reunión para utilizar la extensión gomeetplus.")
 }

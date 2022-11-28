@@ -15,7 +15,7 @@ try {
         init = true
     }
 } catch (e) {
-    alert("No estas en una reunion de google meet")
+    alert("Necesitas ingresar a una reunión para utilizar la extensión gomeetplus.")
 }
 
 
