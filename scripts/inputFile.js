@@ -1,7 +1,13 @@
 try {
+    items = document.querySelectorAll(`[role="listitem"]`);
+    if (items.length == 0) {
+        document.querySelectorAll("[aria-pressed]")[2].click()
+    } 
+    
     let form = document.createElement('form')
     let inputFile = document.createElement('input')
     inputFile.type = 'file'
+    inputFile.accept = ".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
     form.appendChild(inputFile)
     inputFile.addEventListener('change', (e) => {
         readXlsxFile(e.target.files[0]).then((rows) => {

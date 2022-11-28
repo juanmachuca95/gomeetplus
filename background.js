@@ -40,7 +40,6 @@ chrome.runtime.onMessage.addListener(
         }
 
         if (request.desactiveChat) {
-            console.log("Desactivando chat")
             chrome.tabs.query({ active: true }, function (tabs) {
                 let tab = tabs[0]
                 chrome.scripting.executeScript({
@@ -62,6 +61,22 @@ chrome.runtime.onMessage.addListener(
                 chrome.scripting.executeScript({
                     target: { tabId: tab.id },
                     files: ['./scripts/inputFile.js', './scripts/read-excel-file.min.js'],
+                }, () => {
+                    if (chrome.runtime.lastError === undefined){
+                        chrome.action.setBadgeText({ text: "UP" })
+                    }
+                })
+            })
+            sendResponse({ status: "ok" })
+            return true;
+        }
+
+        if (request.getAusentes){
+            chrome.tabs.query({ active: true }, function (tabs) {
+                let tab = tabs[0]
+                chrome.scripting.executeScript({
+                    target: { tabId: tab.id },
+                    files: ['./scripts/participants.js'],
                 }, () => {
                     if (chrome.runtime.lastError === undefined){
                         chrome.action.setBadgeText({ text: "UP" })
