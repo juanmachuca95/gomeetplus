@@ -1,9 +1,6 @@
 
 # ![icon](images/icons/icon32.png) GomeetPlus 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PQETBzgBkG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<!-- [![Alt text](/images/screen.png)](https://youtu.be/PQETBzgBkG8)-->
 
 ## Description
 GomeetPlus allows you to see the chat messages while you share the screen or perform another task by activating chat notifications, it also allows you to know the participants who could not attend your meeting, implementing your list of participants in excel format. This extension is ideal if you teach using google meet
